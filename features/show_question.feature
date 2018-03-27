@@ -7,11 +7,11 @@ Feature:Show the content of existing  questions in the Question List Page
  Background: questions in database
  
   Given the following questions exist:
-  | content      | option1 | option2      | option3      | option4    |
-  | Star Wars    | PG      | George Lucas |   1977-05-25 |  pust      |
-  | Blade Runner | PG      | Ridley Scott |   1982-06-25 |  mine      |
-  | Alien        | R       | Rajamouli    |   1979-05-25 |  stup      |
-  | THX-1138     | R       | George Lucas |   1971-03-11 |  purr      |
+  | content      | option1 | option2      | option3      | option4    | answer  |
+  | Star Wars    | PG      | George Lucas |   1977-05-25 |  pust      | option1 |
+  | Blade Runner | PG      | Ridley Scott |   1982-06-25 |  mine      | option2 |
+  | Alien        | R       | Rajamouli    |   1979-05-25 |  stup      | option4 |
+  | THX-1138     | R       | George Lucas |   1971-03-11 |  purr      | option2 |
   
   
   Scenario: showing the content of the existing question

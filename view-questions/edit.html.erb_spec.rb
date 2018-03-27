@@ -7,7 +7,8 @@ RSpec.describe "questions/edit", type: :view do
       :option1 => "MyString",
       :option2 => "MyString",
       :option3 => "MyString",
-      :option4 => "MyString"
+      :option4 => "MyString",
+      :answer => "option4"
     ))
   end
 
@@ -25,6 +26,8 @@ RSpec.describe "questions/edit", type: :view do
       assert_select "input[name=?]", "question[option3]"
 
       assert_select "input[name=?]", "question[option4]"
+      
+      assert_select "input[name=?]", "question[answer"
     end
   end
 end

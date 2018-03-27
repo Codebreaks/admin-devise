@@ -9,20 +9,22 @@ To get started with the app, clone the repo and then install the needed gems:
 $ bundle install --without production
 ```
 
-Next, migrate the database:
+Next, apply database migrations to both the dev and test databases:
 
 ```
-$ rails db:migrate
+$ bundle exec rake db:migrate
+$ bundle exec rake db:migrate RAILS_ENV=test
 ```
 
-Finally, run the test suite to verify that everything is working correctly:
+Run rspec and cucumber tests to make sure everything is working:
 
 ```
-$ rails test
+$ rspec
+$ cucumber
 ```
 
-If the test suite passes, you'll be ready to run the app in a local server:
+If the tests pass, you'll be ready to run the app in a local server:
 
 ```
-$ rails server
+$ rails server -p $PORT -b $IP
 ```
