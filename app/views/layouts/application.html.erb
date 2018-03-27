@@ -18,6 +18,7 @@
         <nav>
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Take the test!", test_questions_path %></li>
+            <li><%= link_to "Add", questions_path %></li>
             <li><%= link_to "Home",  root_path %></li>
             <li><%= link_to "Help",  help_path %></li>
             <% if logged_in? %>
