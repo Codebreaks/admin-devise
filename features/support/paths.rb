@@ -15,6 +15,10 @@ module NavigationHelpers
 
     when /^the home\s?page$/
       '/'
+    
+    when /^the index page for test_questions/i
+      '/test_questions'
+    
     when /^Sign up$/
       signup_path
 

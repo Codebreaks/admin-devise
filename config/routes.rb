@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
   
   resources :users
+  resources :test_questions
+  
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  # root 'users#index'
+  # root :to => redirect('/test_questions')
 
   get 'sessions/new'
   get 'users/new'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
   root 'static_pages#home'
   get    '/help',    to: 'static_pages#help'
