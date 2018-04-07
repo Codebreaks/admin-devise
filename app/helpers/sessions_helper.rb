@@ -14,9 +14,9 @@ module SessionsHelper
     end
     
     # logged in as admin or general student.
-    def logged_in_as
-        
-    end
+    # def logged_in_as
+    #     session[:]
+    # end
     
     # Logs out the current user.
     def log_out
