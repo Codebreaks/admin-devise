@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  resources :users
+  
   resources :test_questions
   resources :questions
   
@@ -21,4 +21,5 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   
+  resources :users
 end
