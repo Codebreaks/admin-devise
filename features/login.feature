@@ -10,11 +10,11 @@ Feature: Login to the website
 Background: Users in a database
  
   Given the following users exist:
-  | name        | email         | created_at        | updated_at  | password_digest|
-  | Xien        | xthomas       | shieldedRavine    | Admin       |     123           |
-  | Edmaad      | edScrumMaster | shovelWaterSpirit | Users       |     567           |
-  | Alien       | iAmReal       | sugarStarWars     | Users       |                |
-  | George      | armyOfOne     | georgeOfTheJungle | Users       |                |
+  | name        | email         | created_at        | updated_at  | password_digest| role |
+  | Xien        | xthomas       | shieldedRavine    | Admin       |     123        | admin|
+  | Edmaad      | edScrumMaster | shovelWaterSpirit | Users       |     567        | user |
+  | Alien       | iAmReal       | sugarStarWars     | Users       |                | TA   |
+  | George      | armyOfOne     | georgeOfTheJungle | Users       |                | user |
 
 Scenario: verify output when email id is entered
   Given I am on the home page

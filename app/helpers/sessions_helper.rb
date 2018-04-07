@@ -12,7 +12,12 @@ module SessionsHelper
     def logged_in?
         !current_user.nil?
     end
-
+    
+    # logged in as admin or general student.
+    def logged_in_as
+        
+    end
+    
     # Logs out the current user.
     def log_out
         session.delete(:user_id)
