@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
+ 
   
+  # devise_for :bootstrap3s
   resources :test_questions
   resources :questions
   
@@ -14,12 +16,12 @@ Rails.application.routes.draw do
   get 'questions/feedback'
   get 'questions/answer'
   
-  root 'static_pages#home'
-  get    '/help',    to: 'static_pages#help'
-  get    '/signup',  to: 'users#new'
-  get    '/login',   to: 'sessions#new'
-  post   '/login',   to: 'sessions#create'
-  delete '/logout',  to: 'sessions#destroy'
-  
+  root 'visitors#index'
+  # get    '/help',    to: 'static_pages#help'
+  # get    '/signup',  to: 'users#new'
+  # get    '/login',   to: 'sessions#new'
+  # post   '/login',   to: 'sessions#create'
+  # delete '/logout',  to: 'sessions#destroy'
+  devise_for :users
   resources :users
 end

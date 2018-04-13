@@ -29,3 +29,28 @@ questions = [{:content => 'What color is the sky?',
 questions.each do |question|
     Question.create!(question)
 end
+
+user = CreateAdminService.new.call
+
+puts 'CREATED ADMIN USER: ' << user.email 
+puts 'CREATED ADMIN PASSWORD: ' << user.password
+
+
+novice = User.new({ name: "Admin User", email: 'admin@email.com',
+               password: 'password', password_confirmation: 'password'})
+    
+#admin.toggle!(:admin)
+# admin.set_default_role
+novice.set_admin
+# if admin.valid?
+#   admin.save()
+
+
+# elsif admin.errors.any?
+#   admin.errors.full_messages.each do |msg|
+#     puts msg
+#   end
+# else
+#   puts "****NOT VALID****"
+# end
+puts novice.admin?

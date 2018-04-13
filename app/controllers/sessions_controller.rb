@@ -1,4 +1,8 @@
 class SessionsController < ApplicationController
+  # before_action :authenticate_user!
+  # before_action :admin_only, :except => :show
+  
+  
   def new
   end
 
